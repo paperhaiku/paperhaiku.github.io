@@ -1,0 +1,198 @@
+<html>
+
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="../../haiku.css">
+		<title>Sharpness-Aware Minimization for Efficiently Improving Generalization | Paper Haiku</title>
+		<link rel="shortcut icon" type="image/png" href="../../favicon.png"/>
+
+	</head>
+
+
+	<body>
+
+		<div class="header">
+			<a href="../../index.html" class="heading">
+				Paper Haiku
+			</a>
+			<div class="nav">
+				<!-- <a class="nav-link" href="">Contribute</a> -->
+				<!-- <a class="nav-link" href="">Request</a> -->
+				<a class="nav-link" href="../../about.html">About</a>
+			</div>
+		</div>
+
+		<div class="content-holder">
+
+			<div class="content">
+
+				<div class="content-title">
+					Sharpness-Aware Minimization for Efficiently Improving Generalization
+				</div>
+
+				<div class="content-body-top">
+					<div class="content-body-top-title">
+						Haiku
+					</div>
+					
+						For each batch,<br>
+					
+						W = current set of params<br>
+					
+						Calculate H = grad(W) from loss.<br>
+					
+						 <br>
+					
+						Using H,<br>
+					
+						Get nearby weights (W + e),<br>
+					
+						Calculate G = grad(W+e) from new loss.<br>
+					
+						 <br>
+					
+						Using G,<br>
+					
+						Make parameter updates to<br>
+					
+						Model weights W.<br>
+					
+						 <br>
+					
+						In other words,<br>
+					
+						 <br>
+					
+						Look around current weights,<br>
+					
+						Calc gradient wrt a better vantage point,<br>
+					
+						Use that to update current parameters.<br>
+					
+						 <br>
+					
+						Better accuracy!<br>
+					
+						but with -<br>
+					
+						same old models.<br>
+					
+						 <br>
+					
+						Caveat - <br>
+					
+						Training is twice as slow,<br>
+					
+						Due to x2 backward pass.<br>
+					
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						<div class="content-body-left-title">
+						Abstract
+						</div>
+						In today’s heavily overparameterized models, the value of the training loss provides few guarantees on model generalization ability. Indeed, optimizing only the training loss value, as is commonly done, can easily lead to suboptimal model quality. Motivated by the connection between geometry of the loss landscape and generalization, including a generalization bound that we prove here we introduce a novel, effective procedure for instead simultaneously minimizing loss value and loss sharpness. In particular, our procedure, Sharpness-Aware Minimization (SAM), seeks parameters that lie in neighborhoods having uniformly low loss; this formulation results in a minmax optimization problem on which gradient descent can be performed efficiently. We present empirical results showing that SAM improves model generalization across a variety of benchmark datasets (e.g., CIFAR-{10, 100}, ImageNet, finetuning tasks) and models, yielding novel state-of-the-art performance for several. Additionally, we find that SAM natively provides robustness to label noise on par with that provided by state-of-the-art procedures that specifically target learning with noisy labels.
+					</div>
+
+					<div class="content-body-right">
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Pierre Foret,&nbsp;
+							
+								Ariel Kleiner,&nbsp;
+							
+								Hossein Mobahi,&nbsp;
+							
+								Behnam Neyshabur,&nbsp;
+									
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							Google Research
+						</p>
+
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							88.61%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">CIFAR-10 Accuracy</span> 
+							<br>
+							99.70%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">CIFAR-100 Accuracy</span> 
+							<br>
+							96.08%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Optimization;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Advanced				
+						</p>
+
+						<span>
+						<a class="read-more-link" target="_blank" href="https://arxiv.org/pdf/2010.01412v2.pdf">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/sharpness-aware-minimization-for-efficiently-1" target="_blank">
+							Code
+						</a>
+						</span>
+					</div>
+
+				</div>
+
+				<div class="content-footer">
+					Paper Published on: 04 Dec 2020
+					<br>
+					Haiku added on: 04 Feb 2021
+				</div>
+			</div>
+
+
+			<div class="excerpt-holder">
+				<div class="excerpt-title">
+					Paper excerpts to justify the haiku
+				</div>
+				
+					<img class="excerpt-image" src="../.././papers/0000002/screenshots/0000002_01.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000002/screenshots/0000002_02.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000002/screenshots/0000002_03.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000002/screenshots/0000002_04.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000002/screenshots/0000002_05.png">
+				
+			</div>
+		</div>
+
+
+</html>

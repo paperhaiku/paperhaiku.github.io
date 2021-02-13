@@ -1,0 +1,218 @@
+<html>
+
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="../../haiku.css">
+		<title>An Image Is Worth 16x16 Words: Transformers For Image Recognition At Scale | Paper Haiku</title>
+		<link rel="shortcut icon" type="image/png" href="../../favicon.png"/>
+
+	</head>
+
+
+	<body>
+
+		<div class="header">
+			<a href="../../index.html" class="heading">
+				Paper Haiku
+			</a>
+			<div class="nav">
+				<!-- <a class="nav-link" href="">Contribute</a> -->
+				<!-- <a class="nav-link" href="">Request</a> -->
+				<a class="nav-link" href="../../about.html">About</a>
+			</div>
+		</div>
+
+		<div class="content-holder">
+
+			<div class="content">
+
+				<div class="content-title">
+					An Image Is Worth 16x16 Words: Transformers For Image Recognition At Scale
+				</div>
+
+				<div class="content-body-top">
+					<div class="content-body-top-title">
+						Haiku
+					</div>
+					
+						Transformers work well in NLP,<br>
+					
+						Lets test them for vision,<br>
+					
+						But you can't pass the entire image.<br>
+					
+						 <br>
+					
+						Break an image<br>
+					
+						Into small patches,<br>
+					
+						Flatten each patch.<br>
+					
+						 <br>
+					
+						And add positional embeddings<br>
+					
+						and pass it into a transformer<br>
+					
+						with 632M parameters.<br>
+					
+						 <br>
+					
+						Note:<br>
+					
+						This only works well when<br>
+					
+						pre trained with very large datasets,<br>
+					
+						And then fine tuned on small ones.<br>
+					
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						<div class="content-body-left-title">
+						Abstract
+						</div>
+						While the Transformer architecture has become the de-facto standard for natural language processing tasks, its applications to computer vision remain limited. In vision, attention is either applied in conjunction with convolutional networks, or used to replace certain components of convolutional networks while keeping their overall structure in place. We show that this reliance on CNNs is not necessary and a pure transformer applied directly to sequences of image patches can perform very well on image classification tasks. When pre-trained on large amounts of data and transferred to multiple mid-sized or small image recognition benchmarks (ImageNet, CIFAR-100, VTAB, etc.), Vision Transformer (ViT) attains excellent results compared to state-of-the-art convolutional networks while requiring substantially fewer computational resources to train.
+					</div>
+
+					<div class="content-body-right">
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Alexey Dosovitskiy,&nbsp;
+							
+								Lucas Beyer,&nbsp;
+							
+								Alexander Kolesnikov,&nbsp;
+							
+								Dirk Weissenborn,&nbsp;
+							
+								Xiaohua Zhai,&nbsp;
+							
+								Thomas Unterthiner,&nbsp;
+							
+								Mostafa Dehghani,&nbsp;
+							
+								Matthias Minderer,&nbsp;
+							
+								Georg Heigold,&nbsp;
+							
+								Sylvain Gelly,&nbsp;
+							
+								Jakob Uszkoreit,&nbsp;
+							
+								Neil Houlsby,&nbsp;
+									
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							Google Research
+						</p>
+
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							87.54%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">CIFAR-10 Accuracy</span> 
+							<br>
+							99.37%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">CIFAR-100 Accuracy</span> 
+							<br>
+							93.51%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">VTAB Accuracy</span> 
+							<br>
+							77.63%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">Oxford-IIIT Pets</span> 
+							<br>
+							97.56%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">Oxford Flowers-102</span> 
+							<br>
+							99.74%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Few Shot Learning;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Intermediate				
+						</p>
+
+						<span>
+						<a class="read-more-link" target="_blank" href="https://arxiv.org/pdf/2010.11929v1.pdf">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/an-image-is-worth-16x16-words-transformers-1" target="_blank">
+							Code
+						</a>
+						</span>
+					</div>
+
+				</div>
+
+				<div class="content-footer">
+					Paper Published on: 22 Oct 2020
+					<br>
+					Haiku added on: 06 Feb 2021
+				</div>
+			</div>
+
+
+			<div class="excerpt-holder">
+				<div class="excerpt-title">
+					Paper excerpts to justify the haiku
+				</div>
+				
+					<img class="excerpt-image" src="../.././papers/0000004/screenshots/0000004_01.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000004/screenshots/0000004_02.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000004/screenshots/0000004_03.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000004/screenshots/0000004_04.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000004/screenshots/0000004_05.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000004/screenshots/0000004_06.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000004/screenshots/0000004_07.png">
+				
+			</div>
+		</div>
+
+
+</html>

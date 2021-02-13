@@ -1,0 +1,164 @@
+<html>
+
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="../../haiku.css">
+		<title>Circumventing Outliers of AutoAugment with Knowledge Distillation | Paper Haiku</title>
+		<link rel="shortcut icon" type="image/png" href="../../favicon.png"/>
+
+	</head>
+
+
+	<body>
+
+		<div class="header">
+			<a href="../../index.html" class="heading">
+				Paper Haiku
+			</a>
+			<div class="nav">
+				<!-- <a class="nav-link" href="">Contribute</a> -->
+				<!-- <a class="nav-link" href="">Request</a> -->
+				<a class="nav-link" href="../../about.html">About</a>
+			</div>
+		</div>
+
+		<div class="content-holder">
+
+			<div class="content">
+
+				<div class="content-title">
+					Circumventing Outliers of AutoAugment with Knowledge Distillation
+				</div>
+
+				<div class="content-body-top">
+					<div class="content-body-top-title">
+						Haiku
+					</div>
+					
+						Yes, auto-augment is good, <br>
+					
+						but having a teacher <br>
+					
+						along the way is better. <br>
+					
+						 <br>
+					
+						Aggressive augmentations, <br>
+					
+						may lead to incorrect labels, <br>
+					
+						due to lost semantic info. <br>
+					
+						 <br>
+					
+						Add KL Div. loss of top-k labels, <br>
+					
+						between teacher and student predictions, <br>
+					
+						better auto-augmentations! <br>
+					
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						<div class="content-body-left-title">
+						Abstract
+						</div>
+						AutoAugment has been a powerful algorithm that improves the accuracy of many vision tasks, yet it is sensitive to the operator space as well as hyper-parameters, and an improper setting may degenerate network optimization. This paper delves deep into the working mechanism, and reveals that AutoAugment may remove part of discriminative information from the training image and so insisting on the ground-truth label is no longer the best option. To relieve the inaccuracy of supervision, we make use of knowledge distillation that refers to the output of a teacher model to guide network training. Experiments are performed in standard image classification benchmarks, and demonstrate the effectiveness of our approach in suppressing noise of data augmentation and stabilizing training. Upon the cooperation of knowledge distillation and AutoAugment, we claim the new state-of-the-art on ImageNet classification with a top-1 accuracy of 85.8%.
+					</div>
+
+					<div class="content-body-right">
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Longhui Wei,&nbsp;
+							
+								An Xiao,&nbsp;
+							
+								Lingxi Xie,&nbsp;
+							
+								Xin Chen ,&nbsp;
+							
+								Xiaopeng Zhang,&nbsp;
+							
+								Qi Tian,&nbsp;
+									
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							Huawei Inc.
+						</p>
+
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							85.80%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Data Augmentation;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Advanced				
+						</p>
+
+						<span>
+						<a class="read-more-link" target="_blank" href="https://arxiv.org/pdf/2003.11342v1.pdf">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/circumventing-outliers-of-autoaugment-with" target="_blank">
+							Code
+						</a>
+						</span>
+					</div>
+
+				</div>
+
+				<div class="content-footer">
+					Paper Published on: 25 Mar 2020
+					<br>
+					Haiku added on: 08 Feb 2021
+				</div>
+			</div>
+
+
+			<div class="excerpt-holder">
+				<div class="excerpt-title">
+					Paper excerpts to justify the haiku
+				</div>
+				
+					<img class="excerpt-image" src="../.././papers/0000007/screenshots/0000007_01.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000007/screenshots/0000007_02.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000007/screenshots/0000007_03.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000007/screenshots/0000007_04.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000007/screenshots/0000007_05.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000007/screenshots/0000007_06.png">
+				
+			</div>
+		</div>
+
+
+</html>

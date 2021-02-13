@@ -1,0 +1,172 @@
+<html>
+
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="../../haiku.css">
+		<title>Adversarial Examples Improve Image Recognition | Paper Haiku</title>
+		<link rel="shortcut icon" type="image/png" href="../../favicon.png"/>
+
+	</head>
+
+
+	<body>
+
+		<div class="header">
+			<a href="../../index.html" class="heading">
+				Paper Haiku
+			</a>
+			<div class="nav">
+				<!-- <a class="nav-link" href="">Contribute</a> -->
+				<!-- <a class="nav-link" href="">Request</a> -->
+				<a class="nav-link" href="../../about.html">About</a>
+			</div>
+		</div>
+
+		<div class="content-holder">
+
+			<div class="content">
+
+				<div class="content-title">
+					Adversarial Examples Improve Image Recognition
+				</div>
+
+				<div class="content-body-top">
+					<div class="content-body-top-title">
+						Haiku
+					</div>
+					
+						Jointly train, <br>
+					
+						With adversarial samples <br>
+					
+						And clean samples <br>
+					
+						 <br>
+					
+						But maintain separate  <br>
+					
+						Batch norm layers, <br>
+					
+						for each distribution. <br>
+					
+						 <br>
+					
+						At test time, <br>
+					
+						use batch norm layers <br>
+					
+						from clean samples only. <br>
+					
+						 <br>
+					
+						Better accuracy, <br>
+					
+						without extra clean training data, <br>
+					
+						moreover adversarially robust!  <br>
+					
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						<div class="content-body-left-title">
+						Abstract
+						</div>
+						Adversarial examples are commonly viewed as a threat to ConvNets. Here we present an opposite perspective: adversarial examples can be used to improve image recognition models if harnessed in the right manner. We propose AdvProp, an enhanced adversarial training scheme which treats adversarial examples as additional examples, to prevent overfitting. Key to our method is the usage of a separate auxiliary batch norm for adversarial examples, as they have different underlying distributions to normal examples. We show that AdvProp improves a wide range of models on various image recognition tasks and performs better when the models are bigger. For instance, by applying AdvProp to the latest EfficientNet-B7 on ImageNet, we achieve significant improvements on ImageNet (+0.7%), ImageNet-C (+6.5%), ImageNet-A (+7.0%) and StylizedImageNet (+4.8%). With an enhanced EfficientNet-B8, our method achieves the state-of-the-art 85.5% ImageNet top-1 accuracy without extra data. This result even surpasses the best model in which is trained with 3.5B Instagram images (∼3000× more than ImageNet) and ∼9.4× more parameters.
+					</div>
+
+					<div class="content-body-right">
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Cihang Xie,&nbsp;
+							
+								Mingxing Tan,&nbsp;
+							
+								Boqing Gong,&nbsp;
+							
+								Jiang Wang,&nbsp;
+							
+								Alan Yuille,&nbsp;
+							
+								Quoc V. Le,&nbsp;
+									
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							Google, Johns Hopkins University
+						</p>
+
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							85.50%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Adversarial Training;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Intermediate				
+						</p>
+
+						<span>
+						<a class="read-more-link" target="_blank" href="https://arxiv.org/pdf/1911.09665v2.pdf">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/adversarial-examples-improve-image" target="_blank">
+							Code
+						</a>
+						</span>
+					</div>
+
+				</div>
+
+				<div class="content-footer">
+					Paper Published on: 14 Apr 2020
+					<br>
+					Haiku added on: 11 Feb 2021
+				</div>
+			</div>
+
+
+			<div class="excerpt-holder">
+				<div class="excerpt-title">
+					Paper excerpts to justify the haiku
+				</div>
+				
+					<img class="excerpt-image" src="../.././papers/0000009/screenshots/0000009_01.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000009/screenshots/0000009_02.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000009/screenshots/0000009_03.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000009/screenshots/0000009_04.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000009/screenshots/0000009_05.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000009/screenshots/0000009_06.png">
+				
+			</div>
+		</div>
+
+
+</html>

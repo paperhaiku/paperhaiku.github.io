@@ -1,0 +1,190 @@
+<html>
+
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="../../haiku.css">
+		<title>Fixing the train-test resolution discrepancy | Paper Haiku</title>
+		<link rel="shortcut icon" type="image/png" href="../../favicon.png"/>
+
+	</head>
+
+
+	<body>
+
+		<div class="header">
+			<a href="../../index.html" class="heading">
+				Paper Haiku
+			</a>
+			<div class="nav">
+				<!-- <a class="nav-link" href="">Contribute</a> -->
+				<!-- <a class="nav-link" href="">Request</a> -->
+				<a class="nav-link" href="../../about.html">About</a>
+			</div>
+		</div>
+
+		<div class="content-holder">
+
+			<div class="content">
+
+				<div class="content-title">
+					Fixing the train-test resolution discrepancy
+				</div>
+
+				<div class="content-body-top">
+					<div class="content-body-top-title">
+						Haiku
+					</div>
+					
+						Train augmentations<br>
+					
+						not like<br>
+					
+						test augmentations.<br>
+					
+						<br>
+					
+						Examine the statistics…<br>
+					
+						What does it cause?<br>
+					
+						Domain shift!<br>
+					
+						<br>
+					
+						But alas,<br>
+					
+						we need train augmentations,<br>
+					
+						for boosting accuracy.<br>
+					
+						<br>
+					
+						Finetune, but<br>
+					
+						only last 2 layers,<br>
+					
+						With test augmentations.<br>
+					
+						<br>
+					
+						FixRes!<br>
+					
+						More accuracy,<br>
+					
+						same old models.<br>
+					
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						<div class="content-body-left-title">
+						Abstract
+						</div>
+						Data-augmentation is key to the training of neural networks for image classification. This paper first shows that existing augmentations induce a significant discrepancy between the size of the objects seen by the classifier at train and test time: in fact, a lower train resolution improves the classification at test time! We then propose a simple strategy to optimize the classifier performance, that employs different train and test resolutions. It relies on a computationally cheap fine-tuning of the network at the test resolution. This enables training strong classifiers using small training images, and therefore significantly reduce the training time. For instance, we obtain 77.1% top-1 accuracy on ImageNet with a ResNet-50 trained on 128×128 images, and 79.8% with one trained at 224×224. A ResNeXt-101 32x48d pre-trained with weak supervision on 940 million 224×224 images and further optimized with our technique for test resolution 320×320 achieves 86.4% top1 accuracy (top-5: 98.0%). To the best of our knowledge this is the highest ImageNet single-crop accuracy to date.
+					</div>
+
+					<div class="content-body-right">
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Hugo Touvron,&nbsp;
+							
+								Andrea Vedaldi,&nbsp;
+							
+								Matthijs Douze,&nbsp;
+							
+								Herve Jegou,&nbsp;
+									
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							Facebook AI Research
+						</p>
+
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							86.40%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">iNaturalist Top-1 Acc</span> 
+							<br>
+							75.4%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">Oxford-IIIT Pets Top-1 Acc</span> 
+							<br>
+							94.80%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Data Augmentation;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Advanced				
+						</p>
+
+						<span>
+						<a class="read-more-link" target="_blank" href="https://arxiv.org/pdf/1906.06423v3.pdf">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/fixing-the-train-test-resolution-discrepancy" target="_blank">
+							Code
+						</a>
+						</span>
+					</div>
+
+				</div>
+
+				<div class="content-footer">
+					Paper Published on: 30 Mar 2020
+					<br>
+					Haiku added on: 08 Feb 2021
+				</div>
+			</div>
+
+
+			<div class="excerpt-holder">
+				<div class="excerpt-title">
+					Paper excerpts to justify the haiku
+				</div>
+				
+					<img class="excerpt-image" src="../.././papers/0000006/screenshots/0000006_01.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000006/screenshots/0000006_02.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000006/screenshots/0000006_03.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000006/screenshots/0000006_04.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000006/screenshots/0000006_05.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000006/screenshots/0000006_06.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000006/screenshots/0000006_07.png">
+				
+			</div>
+		</div>
+
+
+</html>

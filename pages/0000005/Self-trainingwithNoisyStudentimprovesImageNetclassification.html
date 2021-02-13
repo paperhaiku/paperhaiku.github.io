@@ -1,0 +1,172 @@
+<html>
+
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="../../haiku.css">
+		<title>Self-training with Noisy Student improves ImageNet classification | Paper Haiku</title>
+		<link rel="shortcut icon" type="image/png" href="../../favicon.png"/>
+
+	</head>
+
+
+	<body>
+
+		<div class="header">
+			<a href="../../index.html" class="heading">
+				Paper Haiku
+			</a>
+			<div class="nav">
+				<!-- <a class="nav-link" href="">Contribute</a> -->
+				<!-- <a class="nav-link" href="">Request</a> -->
+				<a class="nav-link" href="../../about.html">About</a>
+			</div>
+		</div>
+
+		<div class="content-holder">
+
+			<div class="content">
+
+				<div class="content-title">
+					Self-training with Noisy Student improves ImageNet classification
+				</div>
+
+				<div class="content-body-top">
+					<div class="content-body-top-title">
+						Haiku
+					</div>
+					
+						Teacher learns labelled data,<br>
+					
+						teacher makes pseudo labels,<br>
+					
+						larger student learns both.<br>
+					
+						 <br>
+					
+						Swap teacher & student models,<br>
+					
+						and repeat.<br>
+					
+						 <br>
+					
+						Induce noise in the student,<br>
+					
+						by learning data with augmentations,<br>
+					
+						where as teacher only learns clean data.<br>
+					
+						 <br>
+					
+						Noisy student,<br>
+					
+						makes a stronger teacher.<br>
+					
+						 <br>
+					
+						Use dropout & stochastic depth,<br>
+					
+						To train teacher,<br>
+					
+						so it acts like an ensemble during inference.<br>
+					
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						<div class="content-body-left-title">
+						Abstract
+						</div>
+						We present Noisy Student Training, a semi-supervised learning approach that works well even when labeled data is abundant. Noisy Student Training achieves 88.4% top1 accuracy on ImageNet, which is 2.0% better than the state-of-the-art model that requires 3.5B weakly labeled Instagram images. On robustness test sets, it improves ImageNet-A top-1 accuracy from 61.0% to 83.7%, reduces ImageNet-C mean corruption error from 45.7 to 28.3, and reduces ImageNet-P mean flip rate from 27.8 to 12.2. Noisy Student Training extends the idea of self-training and distillation with the use of equal-or-larger student models and noise added to the student during learning. On ImageNet, we first train an EfficientNet model on labeled images and use it as a teacher to generate pseudo labels for 300M unlabeled images. We then train a larger EfficientNet as a student model on the combination of labeled and pseudo labeled images. We iterate this process by putting back the student as the teacher. During the learning of the student, we inject noise such as dropout, stochastic depth, and data augmentation via RandAugment to the student so that the student generalizes better than the teacher.
+					</div>
+
+					<div class="content-body-right">
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Qizhe Xie,&nbsp;
+							
+								Minh-Thang Luong,&nbsp;
+							
+								Eduard Hovy,&nbsp;
+							
+								Quoc V. Le,&nbsp;
+									
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							Google Research
+						</p>
+
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							88.40%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Semi-supervised Learning;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Intermediate				
+						</p>
+
+						<span>
+						<a class="read-more-link" target="_blank" href="https://arxiv.org/pdf/1911.04252v4.pdf">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/self-training-with-noisy-student-improves" target="_blank">
+							Code
+						</a>
+						</span>
+					</div>
+
+				</div>
+
+				<div class="content-footer">
+					Paper Published on: 19 Jun 2020
+					<br>
+					Haiku added on: 07 Feb 2021
+				</div>
+			</div>
+
+
+			<div class="excerpt-holder">
+				<div class="excerpt-title">
+					Paper excerpts to justify the haiku
+				</div>
+				
+					<img class="excerpt-image" src="../.././papers/0000005/screenshots/0000005_01.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000005/screenshots/0000005_02.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000005/screenshots/0000005_03.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000005/screenshots/0000005_04.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000005/screenshots/0000005_05.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000005/screenshots/0000005_06.png">
+				
+			</div>
+		</div>
+
+
+</html>
