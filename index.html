@@ -7,6 +7,16 @@
 		<link rel="stylesheet" href="index.css">
 		<title>Home | Paper Haiku</title>
 		<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+		
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-2VZT87J343"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-2VZT87J343');
+		</script>
+
 	</head>
 
 
@@ -147,7 +157,7 @@
 							Code
 						</a>
 						&nbsp;
-						<a class="read-more-link" href="./pages/0000003/BigTransfer%28BiT%29%3AGeneralVisualRepresentationLearning.html" target="_blank">
+						<a class="read-more-link" href="./pages/0000003/BigTransferBiTGeneralVisualRepresentationLearning.html" target="_blank">
 							Read More
 						</a>
 						</span>
@@ -293,7 +303,7 @@
 							Code
 						</a>
 						&nbsp;
-						<a class="read-more-link" href="./pages/0000002/Sharpness-AwareMinimizationforEfficientlyImprovingGeneralization.html" target="_blank">
+						<a class="read-more-link" href="./pages/0000002/SharpnessAwareMinimizationforEfficientlyImprovingGeneralization.html" target="_blank">
 							Read More
 						</a>
 						</span>
@@ -541,7 +551,7 @@
 							Code
 						</a>
 						&nbsp;
-						<a class="read-more-link" href="./pages/0000006/Fixingthetrain-testresolutiondiscrepancy.html" target="_blank">
+						<a class="read-more-link" href="./pages/0000006/Fixingthetraintestresolutiondiscrepancy.html" target="_blank">
 							Read More
 						</a>
 						</span>
@@ -813,7 +823,7 @@
 							Code
 						</a>
 						&nbsp;
-						<a class="read-more-link" href="./pages/0000004/AnImageIsWorth16x16Words%3ATransformersForImageRecognitionAtScale.html" target="_blank">
+						<a class="read-more-link" href="./pages/0000004/AnImageIsWorth16x16WordsTransformersForImageRecognitionAtScale.html" target="_blank">
 							Read More
 						</a>
 						</span>
@@ -825,6 +835,162 @@
 					Paper Published on: 22 Oct 2020
 					<br>
 					Haiku added on: 06 Feb 2021
+				</div>			
+
+			</div>
+
+			
+
+			<div class="content">
+
+				<div class="content-title">
+					RandAugment: Practical automated data augmentation with a reduced search space
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						
+							Automated data augmentation <br>
+						
+							Over a large search space <br>
+						
+							Is computationally intensive. <br>
+						
+							 <br>
+						
+							Instead use RandAugment, <br>
+						
+							To reduce search space for <br>
+						
+							Selecting good data augmentations. <br>
+						
+							 <br>
+						
+							Also, data augmentation depends on <br>
+						
+							Model size & training set size, <br>
+						
+							Which may be left out if you use  <br>
+						
+							a proxy task for augmentation policy search <br>
+						
+							 <br>
+						
+							How to apply RandAugment? <br>
+						
+							 <br>
+						
+							Given a set of K Augmentations, <br>
+						
+							Randomly select subset N of K augmentations, <br>
+						
+							Then apply each augmentation, with fixed magnitude M. <br>
+						
+							 <br>
+						
+							This avoids the need to learn an augmentation policy, <br>
+						
+							Instead we have 2 interpretable hyperparameters (N,M). <br>
+						
+							Larger N,M = increased regularization. <br>
+						
+							 <br>
+						
+							Appy Grid search over N,M to <br>
+						
+							Efficiently achieve good augmentation policy, <br>
+						
+							Based on exact model & full dataset. <br>
+						
+					</div>
+
+					<div class="content-body-right">
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Ekin D. Cubuk,&nbsp;
+							
+								Barret Zoph,&nbsp;
+							
+								Jonathon Shlens,&nbsp;
+							
+								Quoc V. Le,&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							Google Research				
+						</p>
+
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							85.00%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">COCO Object Detection mAP</span> 
+							<br>
+							42.10%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">CIFAR-10 Accuracy</span> 
+							<br>
+							98.50%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">CIFAR-100 Accuracy</span> 
+							<br>
+							83.30%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Object Detection;&nbsp;
+							
+								Data Augmentation;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Advanced				
+						</p>
+
+						<span>
+						<a class="read-more-link" href="https://arxiv.org/pdf/1909.13719v2.pdf" target="_blank">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/randaugment-practical-data-augmentation-with" target="_blank">
+							Code
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="./pages/0000011/RandAugmentPracticalautomateddataaugmentationwithareducedsearchspace.html" target="_blank">
+							Read More
+						</a>
+						</span>
+					</div>
+
+				</div>	
+
+				<div class="content-footer">
+					Paper Published on: 14 Nov 2019
+					<br>
+					Haiku added on: 13 Feb 2021
 				</div>			
 
 			</div>
@@ -931,7 +1097,7 @@
 							Code
 						</a>
 						&nbsp;
-						<a class="read-more-link" href="./pages/0000005/Self-trainingwithNoisyStudentimprovesImageNetclassification.html" target="_blank">
+						<a class="read-more-link" href="./pages/0000005/SelftrainingwithNoisyStudentimprovesImageNetclassification.html" target="_blank">
 							Read More
 						</a>
 						</span>
@@ -1012,13 +1178,13 @@
 						</p>
 						
 						<p class="content-body-right-para">
-							<span class="detailname">CIFAR-10 Top-1 Acc</span> 
+							<span class="detailname">CIFAR-10 Accuracy</span> 
 							<br>
 							97.18%
 						</p>
 						
 						<p class="content-body-right-para">
-							<span class="detailname">CIFAR-100 Top-1 Acc</span> 
+							<span class="detailname">CIFAR-100 Accuracy</span> 
 							<br>
 							82.48%
 						</p>
@@ -1051,7 +1217,7 @@
 							Code
 						</a>
 						&nbsp;
-						<a class="read-more-link" href="./pages/0000008/MaxUp%3AASimpleWaytoImproveGeneralizationofNeuralNetworkTraining.html" target="_blank">
+						<a class="read-more-link" href="./pages/0000008/MaxUpASimpleWaytoImproveGeneralizationofNeuralNetworkTraining.html" target="_blank">
 							Read More
 						</a>
 						</span>
@@ -1168,7 +1334,7 @@
 						</p>
 						
 						<p class="content-body-right-para">
-							<span class="detailname">COCO Object Detection AP</span> 
+							<span class="detailname">COCO Object Detection mAP</span> 
 							<br>
 							45.20%
 						</p>

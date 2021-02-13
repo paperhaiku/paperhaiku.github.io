@@ -1,0 +1,221 @@
+<html>
+
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="../../haiku.css">
+		<title>RandAugment: Practical automated data augmentation with a reduced search space | Paper Haiku</title>
+		<link rel="shortcut icon" type="image/png" href="../../favicon.png"/>
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-2VZT87J343"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-2VZT87J343');
+		</script>
+
+	</head>
+
+
+	<body>
+
+		<div class="header">
+			<a href="../../index.html" class="heading">
+				Paper Haiku
+			</a>
+			<div class="nav">
+				<!-- <a class="nav-link" href="">Contribute</a> -->
+				<!-- <a class="nav-link" href="">Request</a> -->
+				<a class="nav-link" href="../../about.html">About</a>
+			</div>
+		</div>
+
+		<div class="content-holder">
+
+			<div class="content">
+
+				<div class="content-title">
+					RandAugment: Practical automated data augmentation with a reduced search space
+				</div>
+
+				<div class="content-body-top">
+					<div class="content-body-top-title">
+						Haiku
+					</div>
+					
+						Automated data augmentation <br>
+					
+						Over a large search space <br>
+					
+						Is computationally intensive. <br>
+					
+						 <br>
+					
+						Instead use RandAugment, <br>
+					
+						To reduce search space for <br>
+					
+						Selecting good data augmentations. <br>
+					
+						 <br>
+					
+						Also, data augmentation depends on <br>
+					
+						Model size & training set size, <br>
+					
+						Which may be left out if you use  <br>
+					
+						a proxy task for augmentation policy search <br>
+					
+						 <br>
+					
+						How to apply RandAugment? <br>
+					
+						 <br>
+					
+						Given a set of K Augmentations, <br>
+					
+						Randomly select subset N of K augmentations, <br>
+					
+						Then apply each augmentation, with fixed magnitude M. <br>
+					
+						 <br>
+					
+						This avoids the need to learn an augmentation policy, <br>
+					
+						Instead we have 2 interpretable hyperparameters (N,M). <br>
+					
+						Larger N,M = increased regularization. <br>
+					
+						 <br>
+					
+						Appy Grid search over N,M to <br>
+					
+						Efficiently achieve good augmentation policy, <br>
+					
+						Based on exact model & full dataset. <br>
+					
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						<div class="content-body-left-title">
+						Abstract
+						</div>
+						Recent work has shown that data augmentation has the potential to significantly improve the generalization of deeplearning models. Recently, automated augmentation strategies have led to state-of-the-art results in image classification and object detection. While these strategies were optimized for improving validation accuracy, they also led tostate-of-the-art results in semi-supervised learning and improved robustness to common corruptions of images. Anobstacle to a large-scale adoption of these methods is a separate search phase which increases the training complexity and may substantially increase the computational cost.Additionally, due to the separate search phase, these approaches are unable to adjust the regularization strengthbased on model or dataset size. Automated augmentationpolicies are often found by training small models on smalldatasets and subsequently applied to train larger models.In this work, we remove both of these obstacles. RandAugment has a significantly reduced search space which allowsit to be trained on the target task with no need for a separateproxy task. Furthermore, due to the parameterization, theregularization strength may be tailored to different modeland dataset sizes. RandAugment can be used uniformlyacross different tasks and datasets and works out of the box,matching or surpassing all previous automated augmentation approaches on CIFAR-10/100, SVHN, and ImageNet.On the ImageNet dataset we achieve 85.0% accuracy, a0.6% increase over the previous state-of-the-art and 1.0%increase over baseline augmentation. On object detection,RandAugment leads to 1.0-1.3% improvement over baseline augmentation, and is within 0.3% mAP of AutoAugmenton COCO. Finally, due to its interpretable hyperparameter,RandAugment may be used to investigate the role of dataaugmentation with varying model and dataset size. Code isavailable online.
+					</div>
+
+					<div class="content-body-right">
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Ekin D. Cubuk,&nbsp;
+							
+								Barret Zoph,&nbsp;
+							
+								Jonathon Shlens,&nbsp;
+							
+								Quoc V. Le,&nbsp;
+									
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							Google Research
+						</p>
+
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							85.00%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">COCO Object Detection mAP</span> 
+							<br>
+							42.10%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">CIFAR-10 Accuracy</span> 
+							<br>
+							98.50%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">CIFAR-100 Accuracy</span> 
+							<br>
+							83.30%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Object Detection;&nbsp;
+							
+								Data Augmentation;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Advanced				
+						</p>
+
+						<span>
+						<a class="read-more-link" target="_blank" href="https://arxiv.org/pdf/1909.13719v2.pdf">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/randaugment-practical-data-augmentation-with" target="_blank">
+							Code
+						</a>
+						</span>
+					</div>
+
+				</div>
+
+				<div class="content-footer">
+					Paper Published on: 14 Nov 2019
+					<br>
+					Haiku added on: 13 Feb 2021
+				</div>
+			</div>
+
+
+			<div class="excerpt-holder">
+				<div class="excerpt-title">
+					Paper excerpts to justify the haiku
+				</div>
+				
+					<img class="excerpt-image" src="../.././papers/0000011/screenshots/0000011_01.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000011/screenshots/0000011_02.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000011/screenshots/0000011_03.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000011/screenshots/0000011_04.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000011/screenshots/0000011_05.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000011/screenshots/0000011_06.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000011/screenshots/0000011_07.png">
+				
+			</div>
+		</div>
+
+
+</html>
