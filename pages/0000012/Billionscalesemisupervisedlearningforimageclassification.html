@@ -1,0 +1,220 @@
+<html>
+
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="../../haiku.css">
+		<title>Billion-scale semi-supervised learning for image classification | Paper Haiku</title>
+		<link rel="shortcut icon" type="image/png" href="../../favicon.png"/>
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-2VZT87J343"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-2VZT87J343');
+		</script>
+
+	</head>
+
+
+	<body>
+
+		<div class="header">
+			<a href="../../index.html" class="heading">
+				Paper Haiku
+			</a>
+			<div class="nav">
+				<!-- <a class="nav-link" href="">Contribute</a> -->
+				<!-- <a class="nav-link" href="">Request</a> -->
+				<a class="nav-link" href="../../about.html">About</a>
+			</div>
+		</div>
+
+		<div class="content-holder">
+
+			<div class="content">
+
+				<div class="content-title">
+					Billion-scale semi-supervised learning for image classification
+				</div>
+
+				<div class="content-body-top">
+					<div class="content-body-top-title">
+						Haiku
+					</div>
+					
+						Have lots of unlabelled data?<br>
+					
+						You should try semi-supervised learning,<br>
+					
+						Improves performance on existing models.<br>
+					
+						<br>
+					
+						Semi supervised learning paradigm -<br>
+					
+						Teacher learns clean labelled data,<br>
+					
+						Teacher predicts unlabelled data,<br>
+					
+						<br>
+					
+						Select top-K images in each predicted class,<br>
+					
+						Student is pretrained on K - balanced predicted labels,<br>
+					
+						Student is finetuned on clean labelled data.<br>
+					
+						<br>
+					
+						Assume we also have a <br>
+					
+						Weakly Supervised dataset<br>
+					
+						= labels are noizy.<br>
+					
+						<br>
+					
+						In such a case -<br>
+					
+						Teacher pretrained on weakly (noisy) labelled data,<br>
+					
+						Teacher finetuned on clean labelled data,<br>
+					
+						<br>
+					
+						Teacher predicts unlabelled data,<br>
+					
+						Student pretrained on predicted data,<br>
+					
+						Student fine tuned on clean labelled data.<br>
+					
+						<br>
+					
+						Ultimately,<br>
+					
+						Leverage unlabelled data / noizy data,<br>
+					
+						To improve model accuracy,<br>
+					
+						While maintaining model complexity.<br>
+					
+						<br>
+					
+						Additional tips:<br>
+					
+						Build a balanced distribution for train labels.<br>
+					
+						Size(unlabelled dataset) must be large.<br>
+					
+						Fine tune with true labels only.<br>
+					
+						# Pretrain Epochs needs to be very large.<br>
+					
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						<div class="content-body-left-title">
+						Abstract
+						</div>
+						This paper presents a study of semi-supervised learning with large convolutional networks. We propose a pipeline, based on a teacher/student paradigm, that leverages a large collection of unlabelled images (up to 1 billion). Our main goal is to improve the performance for a given target architecture, like ResNet-50 or ResNext. We provide an extensive analysis of the success factors of our approach, which leads us to formulate some recommendations to produce high-accuracy models for image classification with semisupervised learning. As a result, our approach brings important gains to standard architectures for image, video and fine-grained classification. For instance, by leveraging one billion unlabelled images, our learned vanilla ResNet-50 achieves 81.2% top-1 accuracy on Imagenet benchmark.
+					</div>
+
+					<div class="content-body-right">
+						
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Semi-Supervised Learning;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Intermediate				
+						</p>
+
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							84.80%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								I. Zeki Yalniz,&nbsp;
+							
+								Herve Jegou,&nbsp;
+							
+								Kan Chen,&nbsp;
+							
+								Manohar Paluri,&nbsp;
+							
+								Dhruv Mahajan,&nbsp;
+									
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							Facebook AI
+						</p>
+
+						<span>
+						<a class="read-more-link" target="_blank" href="https://arxiv.org/pdf/1905.00546v1.pdf">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/billion-scale-semi-supervised-learning-for" target="_blank">
+							Code
+						</a>
+						</span>
+					</div>
+
+				</div>
+
+				<div class="content-footer">
+					Paper Published on: 14 Nov 2019
+					<br>
+					Haiku added on: 15 Feb 2021
+				</div>
+			</div>
+
+
+			<div class="excerpt-holder">
+				<div class="excerpt-title">
+					Paper excerpts to justify the haiku
+				</div>
+				
+					<img class="excerpt-image" src="../.././papers/0000012/screenshots/0000012_01.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000012/screenshots/0000012_02.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000012/screenshots/0000012_03.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000012/screenshots/0000012_04.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000012/screenshots/0000012_05.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000012/screenshots/0000012_06.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000012/screenshots/0000012_07.png">
+				
+			</div>
+		</div>
+
+
+</html>
