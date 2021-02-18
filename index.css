@@ -112,6 +112,7 @@ body{
 
 	padding:20px;
 
+	line-height: 25px;
 }
 
 
@@ -150,6 +151,20 @@ body{
 	text-decoration: underline;
 	font-size: 14px;
 }
+
+
+.fixed-footer{
+	position: fixed;
+	bottom:0;
+	background: #FFF;
+	padding:5px;
+	left:0;
+
+	font-size: 11px;
+	border-right:1px solid #ddd;
+	border-top:1px solid #ddd;
+}
+
 
 
 @media (max-width: 1790px) {
@@ -198,6 +213,10 @@ body{
 		justify-content: flex-start;
 		padding:10px;
 
+	}
+
+	.fixed-footer{
+		width:100%;
 	}
 
 }

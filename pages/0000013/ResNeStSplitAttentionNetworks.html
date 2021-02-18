@@ -1,0 +1,286 @@
+<html>
+
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="../../haiku.css">
+		<title>ResNeSt: Split-Attention Networks | Paper Haiku</title>
+		<link rel="shortcut icon" type="image/png" href="../../favicon.png"/>
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-2VZT87J343"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-2VZT87J343');
+		</script>
+
+	</head>
+
+
+	<body>
+
+		<div class="header">
+			<a href="../../index.html" class="heading">
+				Paper Haiku
+			</a>
+			<div class="nav">
+				<!-- <a class="nav-link" href="">Contribute</a> -->
+				<!-- <a class="nav-link" href="">Request</a> -->
+				<a class="nav-link" href="../../about.html">About</a>
+			</div>
+		</div>
+
+		<div class="content-holder">
+
+			<div class="content">
+
+				<div class="content-title">
+					ResNeSt: Split-Attention Networks
+				</div>
+
+				<div class="content-body-top">
+					<div class="content-body-top-title">
+						Haiku
+					</div>
+					
+						ResNeSt leverages <br>
+					
+						channel-wise attention strategy <br>
+					
+						along with a multipath network layout. <br>
+					
+						 <br>
+					
+						Input is split channel-wise, <br>
+					
+						Into K groups. <br>
+					
+						Each group of size K, <br>
+					
+						Split into R sub groups. <br>
+					
+						 <br>
+					
+						Each of R subgroups, <br>
+					
+						Goes through DWS convolutions, <br>
+					
+						Then through split attention. <br>
+					
+						 <br>
+					
+						Split attention gives <br>
+					
+						channelwise weights <br>
+					
+						To each featuremap. <br>
+					
+						 <br>
+					
+						Everything is concatenated <br>
+					
+						At the end, <br>
+					
+						Add residual. <br>
+					
+						 <br>
+					
+						Stack multiple such Split-Attention blocks, <br>
+					
+						= ResNeSt <br>
+					
+						Learn better features! Achieve SOTA! <br>
+					
+						 <br>
+					
+						Moreover  <br>
+					
+						Can be used as drop in replacement <br>
+					
+						For classical residual blocks. <br>
+					
+						 <br>
+					
+						Additionally use: <br>
+					
+						Cosine Annealing, <br>
+					
+						Label smoothening, <br>
+					
+						Auto Augmentation, <br>
+					
+						MixUp Training, <br>
+					
+						Larger Train crop size, <br>
+					
+						Dropout & DropBlock, <br>
+					
+						For improved performance. <br>
+					
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						<div class="content-body-left-title">
+						Abstract
+						</div>
+						It is well known that featuremap attention and multi-path representation are important for visual recognition. In this paper, we present a modularized architecture, which applies the channel-wise attention on different network branches to leverage their success in capturing cross-feature interactions and learning diverse representations. Our design results in a simple and unified computation block, which can be parameterized using only a few variables. Our model, named ResNeSt, outperforms EfficientNet in accuracy and latency trade-off on image classification. In addition, ResNeSt has achieved superior transfer learning results on several public benchmarks serving as the backbone, and has been adopted by the winning entries of COCO-LVIS challenge.
+					</div>
+
+					<div class="content-body-right">
+						
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Object Detection;&nbsp;
+							
+								Semantic Segmentation;&nbsp;
+							
+								Novel Architecture;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Advanced				
+						</p>
+
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							84.50%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">Cityscapes Semantic Segmentation Val mIoU</span> 
+							<br>
+							82.70%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">Cityscapes Semantic Segmentation Test mIoU</span> 
+							<br>
+							83.30%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">COCO test-dev Object Detection boxAP</span> 
+							<br>
+							53.30%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">COCO minival Object Detection boxAP</span> 
+							<br>
+							52.47%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Hang Zhang,&nbsp;
+							
+								Chongruo Wu,&nbsp;
+							
+								Zhongyue Zhang,&nbsp;
+							
+								Yi Zhu,&nbsp;
+							
+								Haibin Lin,&nbsp;
+							
+								Zhi Zhang,&nbsp;
+							
+								Yue Sun,&nbsp;
+							
+								Tong He,&nbsp;
+							
+								Jonas Mueller,&nbsp;
+							
+								R. Manmatha,&nbsp;
+							
+								Mu Li,&nbsp;
+							
+								Alexander Smola,&nbsp;
+									
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							Facebook, UC Davis, Snap, Amazon, ByteDance, SenseTime
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Publish Date</span>
+							<br> 
+							30 Dec 2020
+						</p>
+
+						<span>
+						<a class="read-more-link" target="_blank" href="https://arxiv.org/pdf/2004.08955v2.pdf">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/resnest-split-attention-networks" target="_blank">
+							Code
+						</a>
+						</span>
+					</div>
+
+				</div>
+
+				<div class="content-footer">
+					Haiku added on: 17 Feb 2021
+				</div>
+			</div>
+
+
+			<div class="excerpt-holder">
+				<div class="excerpt-title">
+					Paper excerpts to justify the haiku
+				</div>
+				
+					<img class="excerpt-image" src="../.././papers/0000013/screenshots/0000013_01.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000013/screenshots/0000013_02.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000013/screenshots/0000013_03.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000013/screenshots/0000013_04.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000013/screenshots/0000013_05.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000013/screenshots/0000013_06.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000013/screenshots/0000013_07.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000013/screenshots/0000013_08.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000013/screenshots/0000013_09.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000013/screenshots/0000013_10.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000013/screenshots/0000013_11.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000013/screenshots/0000013_12.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000013/screenshots/0000013_13.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000013/screenshots/0000013_14.png">
+				
+			</div>
+		</div>
+
+
+</html>

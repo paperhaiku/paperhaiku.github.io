@@ -1,0 +1,236 @@
+<html>
+
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="../../haiku.css">
+		<title>EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks | Paper Haiku</title>
+		<link rel="shortcut icon" type="image/png" href="../../favicon.png"/>
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-2VZT87J343"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-2VZT87J343');
+		</script>
+
+	</head>
+
+
+	<body>
+
+		<div class="header">
+			<a href="../../index.html" class="heading">
+				Paper Haiku
+			</a>
+			<div class="nav">
+				<!-- <a class="nav-link" href="">Contribute</a> -->
+				<!-- <a class="nav-link" href="">Request</a> -->
+				<a class="nav-link" href="../../about.html">About</a>
+			</div>
+		</div>
+
+		<div class="content-holder">
+
+			<div class="content">
+
+				<div class="content-title">
+					EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks
+				</div>
+
+				<div class="content-body-top">
+					<div class="content-body-top-title">
+						Haiku
+					</div>
+					
+						Want to scale up your model? <br>
+					
+						Try balancing growth in: <br>
+					
+						Depth, width & resolution. <br>
+					
+						 <br>
+					
+						Bigger image (γ), <br>
+					
+						needs more receptive field, <br>
+					
+						= more model depth(α). <br>
+					
+						 <br>
+					
+						Bigger image, <br>
+					
+						Need to capture fine-grained patterns, <br>
+					
+						= more channels (width)(β) <br>
+					
+						 <br>
+					
+						Use Multi Objective NAS, <br>
+					
+						Optimize for Acc & FLOPS, <br>
+					
+						Produce EfficientNet-B0. <br>
+					
+						 <br>
+					
+						Use grid search  <br>
+					
+						to find optimal α,β,γ <br>
+					
+						For Efficient-B0 : α=1.2, β=1.1, γ=1.15 <br>
+					
+						 <br>
+					
+						Compound Scale EffNet-B0, <br>
+					
+						Create EfficientNet-B1 to B7 <br>
+					
+						Achieve SOTA! <br>
+					
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						<div class="content-body-left-title">
+						Abstract
+						</div>
+						Convolutional Neural Networks (ConvNets) are commonly developed at a fixed resource budget, and then scaled up for better accuracy if more resources are available. In this paper, we systematically study model scaling and identify that carefully balancing network depth, width, and resolution can lead to better performance. Based on this observation, we propose a new scaling method that uniformly scales all dimensions of depth/width/resolution using a simple yet highly effective compound coefficient. We demonstrate the effectiveness of this method on scaling up MobileNets and ResNet. To go even further, we use neural architecture search to design a new baseline network and scale it up to obtain a family of models, called EfficientNets, which achieve much better accuracy and efficiency than previous ConvNets. In particular, our EfficientNet-B7 achieves state-of-the-art 84.3% top-1 accuracy on ImageNet, while being 8.4x smaller and 6.1x faster on inference than the best existing ConvNet. Our EfficientNets also transfer well and achieve state-of-the-art accuracy on CIFAR-100 (91.7%), Flowers (98.8%), and 3 other transfer learning datasets, with an order of magnitude fewer parameters.
+					</div>
+
+					<div class="content-body-right">
+						
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Novel Architecture;&nbsp;
+							
+								Network Architectue Search;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Advanced				
+						</p>
+
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							84.40%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">CIFAR-10 Accuracy</span> 
+							<br>
+							98.90%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">CIFAR-100 Accuracy</span> 
+							<br>
+							91.70%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">Oxford-IIIT Pets Accuracy</span> 
+							<br>
+							95.40%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">Stanford Cars Accuracy</span> 
+							<br>
+							94.70%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Mingxing Tan,&nbsp;
+							
+								Quoc V. Le,&nbsp;
+									
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							Google Research
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Publish Date</span>
+							<br> 
+							14 Nov 2019
+						</p>
+
+						<span>
+						<a class="read-more-link" target="_blank" href="https://arxiv.org/pdf/1905.11946v5.pdf">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/efficientnet-rethinking-model-scaling-for" target="_blank">
+							Code
+						</a>
+						</span>
+					</div>
+
+				</div>
+
+				<div class="content-footer">
+					Haiku added on: 18 Feb 2021
+				</div>
+			</div>
+
+
+			<div class="excerpt-holder">
+				<div class="excerpt-title">
+					Paper excerpts to justify the haiku
+				</div>
+				
+					<img class="excerpt-image" src="../.././papers/0000014/screenshots/0000014_01.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000014/screenshots/0000014_02.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000014/screenshots/0000014_03.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000014/screenshots/0000014_04.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000014/screenshots/0000014_05.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000014/screenshots/0000014_06.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000014/screenshots/0000014_07.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000014/screenshots/0000014_08.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000014/screenshots/0000014_09.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000014/screenshots/0000014_10.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000014/screenshots/0000014_11.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000014/screenshots/0000014_12.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000014/screenshots/0000014_13.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000014/screenshots/0000014_14.png">
+				
+			</div>
+		</div>
+
+
+</html>
