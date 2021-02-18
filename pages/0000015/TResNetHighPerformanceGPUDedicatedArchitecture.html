@@ -1,0 +1,266 @@
+<html>
+
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="../../haiku.css">
+		<title>TResNet: High Performance GPU-Dedicated Architecture | Paper Haiku</title>
+		<link rel="shortcut icon" type="image/png" href="../../favicon.png"/>
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-2VZT87J343"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-2VZT87J343');
+		</script>
+
+	</head>
+
+
+	<body>
+
+		<div class="header">
+			<a href="../../index.html" class="heading">
+				Paper Haiku
+			</a>
+			<div class="nav">
+				<!-- <a class="nav-link" href="">Contribute</a> -->
+				<!-- <a class="nav-link" href="">Request</a> -->
+				<a class="nav-link" href="../../about.html">About</a>
+			</div>
+		</div>
+
+		<div class="content-holder">
+
+			<div class="content">
+
+				<div class="content-title">
+					TResNet: High Performance GPU-Dedicated Architecture
+				</div>
+
+				<div class="content-body-top">
+					<div class="content-body-top-title">
+						Haiku
+					</div>
+					
+						Take a ResNet, <br>
+					
+						Improve training speed, <br>
+					
+						While maintaining accuracy, <br>
+					
+						= TResNet <br>
+					
+						 <br>
+					
+						Use SpaceToDepth, <br>
+					
+						Followed by Conv3x3, <br>
+					
+						As stem(first) layer. <br>
+					
+						 <br>
+					
+						Use inPlace ABN, <br>
+					
+						OneShot BatchNorn + Activation, <br>
+					
+						Saves GPU memory, <br>
+					
+						 <br>
+					
+						Use Anti-Alias Down Sampling, <br>
+					
+						= 3x3 Conv (stride=1)  + Blur Filter (stride=2) <br>
+					
+						Improves accuracy. <br>
+					
+						 <br>
+					
+						Basic Block <br>
+					
+						= 3x3 Conv + 3x3 Conv + SE <br>
+					
+						Residual <br>
+					
+						 <br>
+					
+						BottleNeck Block <br>
+					
+						= 1x1 Conv + 3x3 Conv + SE <br>
+					
+						1x1 Conv + Residual <br>
+					
+						 <br>
+					
+						TResNet uses, <br>
+					
+						Basic Black - First 2 layers <br>
+					
+						BottleNeck - Last 2 layers <br>
+					
+						 <br>
+					
+						Overall, Maintain FLOPS <br>
+					
+						Efficient Memory usage, <br>
+					
+						Faster Training. <br>
+					
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						<div class="content-body-left-title">
+						Abstract
+						</div>
+						Many deep learning models, developed in recent years, reach higher ImageNet accuracy than ResNet50, with fewer or comparable FLOPs count. While FLOPs are often seen as a proxy for network efficiency, when measuring actual GPU training and inference throughput, vanilla ResNet50 is usually significantly faster than its recent competitors, offering better throughput-accuracy trade-off. In this work, we introduce a series of architecture modifications that aim to boost neural networks’ accuracy, while retaining their GPU training and inference efficiency. We first demonstrate and discuss the bottlenecks induced by FLOPs oriented optimizations. We then suggest alternative designs that better utilize GPU structure and assets. Finally, we introduce a new family of GPU-dedicated models, called TResNet, which achieves better accuracy and efficiency than previous ConvNets Using a TResNet model, with similar GPU throughput to ResNet50, we reach 80.8% top-1 accuracy on ImageNet. Our TResNet models also transfer well and achieve state-of-the-art accuracy on competitive single-label classification datasets such as Stanford Cars (96.0%), CIFAR10 (99.0%), CIFAR-100 (91.5%) and Oxford-Flowers (99.1%). TResNet models also achieve state-of-the-art results on a multi-label classification task, and perform well on object detection.
+					</div>
+
+					<div class="content-body-right">
+						
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Novel Architecture;&nbsp;
+							
+								Object Detection;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Advanced				
+						</p>
+
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							84.30%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">CIFAR-10 Accuracy</span> 
+							<br>
+							99.00%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">CIFAR-100 Accuracy</span> 
+							<br>
+							92.60%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">MS COCO Multi Label Classification mAP</span> 
+							<br>
+							86.40%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">Stanford Cars Accuracy</span> 
+							<br>
+							96.30%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Tal Ridnik,&nbsp;
+							
+								Hussam Lawen,&nbsp;
+							
+								Asaf Noy,&nbsp;
+							
+								Emanuel Ben Baruch,&nbsp;
+							
+								Gilad Sharir,&nbsp;
+							
+								Itamar Friedman,&nbsp;
+									
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							DAMO Academy (Alibaba Group)
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Publish Date</span>
+							<br> 
+							27 Aug 2020
+						</p>
+
+						<span>
+						<a class="read-more-link" target="_blank" href="https://arxiv.org/pdf/2003.13630v3.pdf">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/tresnet-high-performance-gpu-dedicated" target="_blank">
+							Code
+						</a>
+						</span>
+					</div>
+
+				</div>
+
+				<div class="content-footer">
+					Haiku added on: 19 Feb 2021
+				</div>
+			</div>
+
+
+			<div class="excerpt-holder">
+				<div class="excerpt-title">
+					Paper excerpts to justify the haiku
+				</div>
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_01.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_02.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_03.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_04.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_05.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_06.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_07.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_08.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_09.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_10.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_11.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_12.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_13.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_14.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_15.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000015/screenshots/0000015_16.png">
+				
+			</div>
+		</div>
+
+
+</html>
