@@ -40,6 +40,184 @@
 			<div class="content">
 
 				<div class="content-title">
+					High-Performance Large-Scale Image Recognition Without Normalization
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						
+							Why does batch norm work? <br>
+						
+							 <br>
+						
+							BN smoothens the loss landscape, <br>
+						
+							Enables more stable training, <br>
+						
+							Using large learning rates. <br>
+						
+							 <br>
+						
+							BN eliminates mean-shift, <br>
+						
+							Caused by ReLU, Gelu etc, <br>
+						
+							Which have non-zero mean activations.  <br>
+						
+							 <br>
+						
+							Then why do we want to get rid of it? <br>
+						
+							 <br>
+						
+							BN is computationally expensive! <br>
+						
+							BN induces train-test discrepancies in model behaviour. <br>
+						
+							BN breaks independence between train samples. <br>
+						
+							 <br>
+						
+							Alternative to Batch Norm <br>
+						
+							= Adaptive Gradient Clipping (AGC) <br>
+						
+							Modified ResNet (NFNet) <br>
+						
+							 <br>
+						
+							Take an existing SE-ResNet, and: <br>
+						
+							Apply Scaled Weight Std. to avoid mean shift, <br>
+						
+							Replace normal activations with scaled activations, <br>
+						
+							Make residual block variance preserving. <br>
+						
+							 <br>
+						
+							Enable training with AGC by: <br>
+						
+							Adaptively changing the gradient (weight update)  <br>
+						
+							for each neuron,  <br>
+						
+							if Norm(Gradient) / Norm (Weight) <br>
+						
+							it is above a certain value(λ). <br>
+						
+							 <br>
+						
+							Finally add latest training methods for improving accuracy: <br>
+						
+							+ Modify the group conv width (set to 128), <br>
+						
+							+ Modify the depth scaling for each residual block, <br>
+						
+							+ MixUp <br>
+						
+							+ RandAugment <br>
+						
+							+ CutMix <br>
+						
+							+ Sharpness Aware Minimization <br>
+						
+							+ PreTrain on 300M images <br>
+						
+							= Achieve SOTA! (without Batch Norm) <br>
+						
+							 <br>
+						
+							Note: <br>
+						
+							Although has more parameters than EfficientNet, <br>
+						
+							NFNets are 8x faster to train. <br>
+						
+					</div>
+
+					<div class="content-body-right">
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Novel Architecture;&nbsp;
+							
+								Regularization;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Advanced				
+						</p>
+						
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							89.20%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Andrew Brock,&nbsp;
+							
+								Soham De,&nbsp;
+							
+								Samuel L. Smith,&nbsp;
+							
+								Karen Simonyan,&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							DeepMind				
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Publish Date</span>
+							<br> 
+							11 Feb 2021				
+						</p>
+
+						<span>
+						<!-- <a class="read-more-link" href="https://arxiv.org/pdf/2102.06171v1.pdf" target="_blank">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/high-performance-large-scale-image" target="_blank">
+							Code
+						</a>
+						&nbsp; -->
+						<a class="read-more-link" href="./pages/0000016/HighPerformanceLargeScaleImageRecognitionWithoutNormalization.html" target="_blank">
+							Learn more
+						</a>
+						</span>
+					</div>
+
+				</div>	
+
+				<div class="content-footer">
+					Haiku added on: 23 Feb 2021
+				</div>			
+
+			</div>
+
+			
+
+			<div class="content">
+
+				<div class="content-title">
 					TResNet: High Performance GPU-Dedicated Architecture
 				</div>
 
@@ -902,6 +1080,128 @@
 			<div class="content">
 
 				<div class="content-title">
+					Adversarial Examples Improve Image Recognition
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						
+							Jointly train, <br>
+						
+							With adversarial samples <br>
+						
+							And clean samples <br>
+						
+							 <br>
+						
+							But maintain separate  <br>
+						
+							Batch norm layers, <br>
+						
+							for each distribution. <br>
+						
+							 <br>
+						
+							At test time, <br>
+						
+							use batch norm layers <br>
+						
+							from clean samples only. <br>
+						
+							 <br>
+						
+							Better accuracy, <br>
+						
+							without extra clean training data, <br>
+						
+							moreover adversarially robust!  <br>
+						
+					</div>
+
+					<div class="content-body-right">
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Adversarial Training;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Intermediate				
+						</p>
+						
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							85.50%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Cihang Xie,&nbsp;
+							
+								Mingxing Tan,&nbsp;
+							
+								Boqing Gong,&nbsp;
+							
+								Jiang Wang,&nbsp;
+							
+								Alan Yuille,&nbsp;
+							
+								Quoc V. Le,&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							Google, Johns Hopkins University				
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Publish Date</span>
+							<br> 
+							14 Apr 2020				
+						</p>
+
+						<span>
+						<!-- <a class="read-more-link" href="https://arxiv.org/pdf/1911.09665v2.pdf" target="_blank">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/adversarial-examples-improve-image" target="_blank">
+							Code
+						</a>
+						&nbsp; -->
+						<a class="read-more-link" href="./pages/0000009/AdversarialExamplesImproveImageRecognition.html" target="_blank">
+							Learn more
+						</a>
+						</span>
+					</div>
+
+				</div>	
+
+				<div class="content-footer">
+					Haiku added on: 11 Feb 2021
+				</div>			
+
+			</div>
+
+			
+
+			<div class="content">
+
+				<div class="content-title">
 					Exploring the Limits of Weakly Supervised Pretraining
 				</div>
 
@@ -1038,128 +1338,6 @@
 						</a>
 						&nbsp; -->
 						<a class="read-more-link" href="./pages/0000010/ExploringtheLimitsofWeaklySupervisedPretraining.html" target="_blank">
-							Learn more
-						</a>
-						</span>
-					</div>
-
-				</div>	
-
-				<div class="content-footer">
-					Haiku added on: 11 Feb 2021
-				</div>			
-
-			</div>
-
-			
-
-			<div class="content">
-
-				<div class="content-title">
-					Adversarial Examples Improve Image Recognition
-				</div>
-
-				<div class="content-body">
-
-					<div class="content-body-left">
-						
-							Jointly train, <br>
-						
-							With adversarial samples <br>
-						
-							And clean samples <br>
-						
-							 <br>
-						
-							But maintain separate  <br>
-						
-							Batch norm layers, <br>
-						
-							for each distribution. <br>
-						
-							 <br>
-						
-							At test time, <br>
-						
-							use batch norm layers <br>
-						
-							from clean samples only. <br>
-						
-							 <br>
-						
-							Better accuracy, <br>
-						
-							without extra clean training data, <br>
-						
-							moreover adversarially robust!  <br>
-						
-					</div>
-
-					<div class="content-body-right">
-						<p class="content-body-right-para">
-							<span class="detailname">Tags</span> 
-							<br>
-							
-								Image Classification;&nbsp;
-							
-								Adversarial Training;&nbsp;
-							
-						</p>
-
-						<p class="content-body-right-para">
-							<span class="detailname">Level</span>
-							<br> 
-							Intermediate				
-						</p>
-						
-						
-						<p class="content-body-right-para">
-							<span class="detailname">ImageNet Top-1 Acc</span> 
-							<br>
-							85.50%
-						</p>
-						
-
-						<p class="content-body-right-para">
-							<span class="detailname">Paper Authors</span>
-							<br>
-							
-								Cihang Xie,&nbsp;
-							
-								Mingxing Tan,&nbsp;
-							
-								Boqing Gong,&nbsp;
-							
-								Jiang Wang,&nbsp;
-							
-								Alan Yuille,&nbsp;
-							
-								Quoc V. Le,&nbsp;
-							
-						</p>
-
-						<p class="content-body-right-para">
-							<span class="detailname">Authors Affiliation</span>
-							<br> 
-							Google, Johns Hopkins University				
-						</p>
-
-						<p class="content-body-right-para">
-							<span class="detailname">Publish Date</span>
-							<br> 
-							14 Apr 2020				
-						</p>
-
-						<span>
-						<!-- <a class="read-more-link" href="https://arxiv.org/pdf/1911.09665v2.pdf" target="_blank">
-							Paper Link
-						</a>
-						&nbsp;
-						<a class="read-more-link" href="https://paperswithcode.com/paper/adversarial-examples-improve-image" target="_blank">
-							Code
-						</a>
-						&nbsp; -->
-						<a class="read-more-link" href="./pages/0000009/AdversarialExamplesImproveImageRecognition.html" target="_blank">
 							Learn more
 						</a>
 						</span>
@@ -1316,120 +1494,6 @@
 			<div class="content">
 
 				<div class="content-title">
-					Circumventing Outliers of AutoAugment with Knowledge Distillation
-				</div>
-
-				<div class="content-body">
-
-					<div class="content-body-left">
-						
-							Yes, auto-augment is good, <br>
-						
-							but having a teacher <br>
-						
-							along the way is better. <br>
-						
-							 <br>
-						
-							Aggressive augmentations, <br>
-						
-							may lead to incorrect labels, <br>
-						
-							due to lost semantic info. <br>
-						
-							 <br>
-						
-							Add KL Div. loss of top-k labels, <br>
-						
-							between teacher and student predictions, <br>
-						
-							better auto-augmentations! <br>
-						
-					</div>
-
-					<div class="content-body-right">
-						<p class="content-body-right-para">
-							<span class="detailname">Tags</span> 
-							<br>
-							
-								Image Classification;&nbsp;
-							
-								Data Augmentation;&nbsp;
-							
-						</p>
-
-						<p class="content-body-right-para">
-							<span class="detailname">Level</span>
-							<br> 
-							Advanced				
-						</p>
-						
-						
-						<p class="content-body-right-para">
-							<span class="detailname">ImageNet Top-1 Acc</span> 
-							<br>
-							85.80%
-						</p>
-						
-
-						<p class="content-body-right-para">
-							<span class="detailname">Paper Authors</span>
-							<br>
-							
-								Longhui Wei,&nbsp;
-							
-								An Xiao,&nbsp;
-							
-								Lingxi Xie,&nbsp;
-							
-								Xin Chen ,&nbsp;
-							
-								Xiaopeng Zhang,&nbsp;
-							
-								Qi Tian,&nbsp;
-							
-						</p>
-
-						<p class="content-body-right-para">
-							<span class="detailname">Authors Affiliation</span>
-							<br> 
-							Huawei Inc.				
-						</p>
-
-						<p class="content-body-right-para">
-							<span class="detailname">Publish Date</span>
-							<br> 
-							25 Mar 2020				
-						</p>
-
-						<span>
-						<!-- <a class="read-more-link" href="https://arxiv.org/pdf/2003.11342v1.pdf" target="_blank">
-							Paper Link
-						</a>
-						&nbsp;
-						<a class="read-more-link" href="https://paperswithcode.com/paper/circumventing-outliers-of-autoaugment-with" target="_blank">
-							Code
-						</a>
-						&nbsp; -->
-						<a class="read-more-link" href="./pages/0000007/CircumventingOutliersofAutoAugmentwithKnowledgeDistillation.html" target="_blank">
-							Learn more
-						</a>
-						</span>
-					</div>
-
-				</div>	
-
-				<div class="content-footer">
-					Haiku added on: 08 Feb 2021
-				</div>			
-
-			</div>
-
-			
-
-			<div class="content">
-
-				<div class="content-title">
 					MaxUp: A Simple Way to Improve Generalization of Neural Network Training
 				</div>
 
@@ -1536,6 +1600,120 @@
 						</a>
 						&nbsp; -->
 						<a class="read-more-link" href="./pages/0000008/MaxUpASimpleWaytoImproveGeneralizationofNeuralNetworkTraining.html" target="_blank">
+							Learn more
+						</a>
+						</span>
+					</div>
+
+				</div>	
+
+				<div class="content-footer">
+					Haiku added on: 08 Feb 2021
+				</div>			
+
+			</div>
+
+			
+
+			<div class="content">
+
+				<div class="content-title">
+					Circumventing Outliers of AutoAugment with Knowledge Distillation
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						
+							Yes, auto-augment is good, <br>
+						
+							but having a teacher <br>
+						
+							along the way is better. <br>
+						
+							 <br>
+						
+							Aggressive augmentations, <br>
+						
+							may lead to incorrect labels, <br>
+						
+							due to lost semantic info. <br>
+						
+							 <br>
+						
+							Add KL Div. loss of top-k labels, <br>
+						
+							between teacher and student predictions, <br>
+						
+							better auto-augmentations! <br>
+						
+					</div>
+
+					<div class="content-body-right">
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Data Augmentation;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Advanced				
+						</p>
+						
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							85.80%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Longhui Wei,&nbsp;
+							
+								An Xiao,&nbsp;
+							
+								Lingxi Xie,&nbsp;
+							
+								Xin Chen ,&nbsp;
+							
+								Xiaopeng Zhang,&nbsp;
+							
+								Qi Tian,&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							Huawei Inc.				
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Publish Date</span>
+							<br> 
+							25 Mar 2020				
+						</p>
+
+						<span>
+						<!-- <a class="read-more-link" href="https://arxiv.org/pdf/2003.11342v1.pdf" target="_blank">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/circumventing-outliers-of-autoaugment-with" target="_blank">
+							Code
+						</a>
+						&nbsp; -->
+						<a class="read-more-link" href="./pages/0000007/CircumventingOutliersofAutoAugmentwithKnowledgeDistillation.html" target="_blank">
 							Learn more
 						</a>
 						</span>
@@ -1667,148 +1845,6 @@
 
 				<div class="content-footer">
 					Haiku added on: 07 Feb 2021
-				</div>			
-
-			</div>
-
-			
-
-			<div class="content">
-
-				<div class="content-title">
-					Big Transfer (BiT): General Visual Representation Learning
-				</div>
-
-				<div class="content-body">
-
-					<div class="content-body-left">
-						
-							Pick a huge model (ResNet152x4),<br>
-						
-							Pretrained on huge dataset (JFT-300M),<br>
-						
-							But with new heuristics.<br>
-						
-							<br>
-						
-							Take the pretrained large model,<br>
-						
-							Finetune on a smaller dataset,<br>
-						
-							= SOTA!<br>
-						
-							<br>
-						
-							Big datasets?<br>
-						
-							Don’t use batch norm,<br>
-						
-							use group norm and weight std.<br>
-						
-							<br>
-						
-							Big datasets?<br>
-						
-							Don’t use MixUp<br>
-						
-							Use it for smaller datasets.<br>
-						
-					</div>
-
-					<div class="content-body-right">
-						<p class="content-body-right-para">
-							<span class="detailname">Tags</span> 
-							<br>
-							
-								Image Classification;&nbsp;
-							
-								Few Shot Learning;&nbsp;
-							
-						</p>
-
-						<p class="content-body-right-para">
-							<span class="detailname">Level</span>
-							<br> 
-							Advanced				
-						</p>
-						
-						
-						<p class="content-body-right-para">
-							<span class="detailname">ImageNet Top-1 Acc</span> 
-							<br>
-							87.54%
-						</p>
-						
-						<p class="content-body-right-para">
-							<span class="detailname">CIFAR-10 Accuracy</span> 
-							<br>
-							99.37%
-						</p>
-						
-						<p class="content-body-right-para">
-							<span class="detailname">CIFAR-100 Accuracy</span> 
-							<br>
-							93.51%
-						</p>
-						
-						<p class="content-body-right-para">
-							<span class="detailname">VTAB Accuracy</span> 
-							<br>
-							76.29%
-						</p>
-						
-
-						<p class="content-body-right-para">
-							<span class="detailname">Paper Authors</span>
-							<br>
-							
-								Alexander Kolesnikov,&nbsp;
-							
-								Lucas Beyer,&nbsp;
-							
-								Xiaohua Zhai,&nbsp;
-							
-								Joan Puigcerver,&nbsp;
-							
-								Jessica Yung,&nbsp;
-							
-								Sylvain Gelly,&nbsp;
-							
-								Neil Houlsby,&nbsp;
-							
-						</p>
-
-						<p class="content-body-right-para">
-							<span class="detailname">Authors Affiliation</span>
-							<br> 
-							Google Research				
-						</p>
-
-						<p class="content-body-right-para">
-							<span class="detailname">Publish Date</span>
-							<br> 
-							05 May 2020				
-						</p>
-
-						<span>
-						<!-- <a class="read-more-link" href="https://arxiv.org/pdf/1912.11370v3.pdf" target="_blank">
-							Paper Link
-						</a>
-						&nbsp;
-						<a class="read-more-link" href="https://paperswithcode.com/paper/large-scale-learning-of-general-visual" target="_blank">
-							Code
-						</a>
-						&nbsp; -->
-						<a class="read-more-link" href="./pages/0000003/BigTransferBiTGeneralVisualRepresentationLearning.html" target="_blank">
-							Learn more
-						</a>
-						</span>
-					</div>
-
-				</div>	
-
-				<div class="content-footer">
-					Haiku added on: 06 Feb 2021
 				</div>			
 
 			</div>
@@ -1966,6 +2002,148 @@
 						</a>
 						&nbsp; -->
 						<a class="read-more-link" href="./pages/0000004/AnImageIsWorth16x16WordsTransformersForImageRecognitionAtScale.html" target="_blank">
+							Learn more
+						</a>
+						</span>
+					</div>
+
+				</div>	
+
+				<div class="content-footer">
+					Haiku added on: 06 Feb 2021
+				</div>			
+
+			</div>
+
+			
+
+			<div class="content">
+
+				<div class="content-title">
+					Big Transfer (BiT): General Visual Representation Learning
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						
+							Pick a huge model (ResNet152x4),<br>
+						
+							Pretrained on huge dataset (JFT-300M),<br>
+						
+							But with new heuristics.<br>
+						
+							<br>
+						
+							Take the pretrained large model,<br>
+						
+							Finetune on a smaller dataset,<br>
+						
+							= SOTA!<br>
+						
+							<br>
+						
+							Big datasets?<br>
+						
+							Don’t use batch norm,<br>
+						
+							use group norm and weight std.<br>
+						
+							<br>
+						
+							Big datasets?<br>
+						
+							Don’t use MixUp<br>
+						
+							Use it for smaller datasets.<br>
+						
+					</div>
+
+					<div class="content-body-right">
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Few Shot Learning;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Advanced				
+						</p>
+						
+						
+						<p class="content-body-right-para">
+							<span class="detailname">ImageNet Top-1 Acc</span> 
+							<br>
+							87.54%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">CIFAR-10 Accuracy</span> 
+							<br>
+							99.37%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">CIFAR-100 Accuracy</span> 
+							<br>
+							93.51%
+						</p>
+						
+						<p class="content-body-right-para">
+							<span class="detailname">VTAB Accuracy</span> 
+							<br>
+							76.29%
+						</p>
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Alexander Kolesnikov,&nbsp;
+							
+								Lucas Beyer,&nbsp;
+							
+								Xiaohua Zhai,&nbsp;
+							
+								Joan Puigcerver,&nbsp;
+							
+								Jessica Yung,&nbsp;
+							
+								Sylvain Gelly,&nbsp;
+							
+								Neil Houlsby,&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							Google Research				
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Publish Date</span>
+							<br> 
+							05 May 2020				
+						</p>
+
+						<span>
+						<!-- <a class="read-more-link" href="https://arxiv.org/pdf/1912.11370v3.pdf" target="_blank">
+							Paper Link
+						</a>
+						&nbsp;
+						<a class="read-more-link" href="https://paperswithcode.com/paper/large-scale-learning-of-general-visual" target="_blank">
+							Code
+						</a>
+						&nbsp; -->
+						<a class="read-more-link" href="./pages/0000003/BigTransferBiTGeneralVisualRepresentationLearning.html" target="_blank">
 							Learn more
 						</a>
 						</span>
