@@ -1,0 +1,252 @@
+<html>
+
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="../../haiku.css">
+		<title>Deep Sparse Rectifier Neural Networks | Paper Haiku</title>
+		<link rel="shortcut icon" type="image/png" href="../../favicon.png"/>
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-2VZT87J343"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-2VZT87J343');
+		</script>
+
+	</head>
+
+
+	<body>
+
+		<div class="header">
+			<a href="../../index.html" class="heading">
+				Paper Haiku
+			</a>
+			<div class="nav">
+				<!-- <a class="nav-link" href="">Contribute</a> -->
+				<!-- <a class="nav-link" href="">Request</a> -->
+				<a class="nav-link" href="../../about.html">About</a>
+			</div>
+		</div>
+
+		<div class="content-holder">
+
+			<div class="content">
+
+				<div class="content-title">
+					Deep Sparse Rectifier Neural Networks
+				</div>
+
+				<div class="content-body-top">
+					<div class="content-body-top-title">
+						Haiku
+					</div>
+					
+						Rectifier Activation function (ReLU) <br>
+					
+						= max(0, x) <br>
+					
+						 <br>
+					
+						What does it do? <br>
+					
+						Produces real zeros in activations, <br>
+					
+						Enables sparsity in networks. <br>
+					
+						 <br>
+					
+						Resembles real biological neural nets, <br>
+					
+						which encode information in a  <br>
+					
+						sparse and distributed way <br>
+					
+						 <br>
+					
+						Why is it better than sigmoid or tanh? <br>
+					
+						because: <br>
+					
+						 <br>
+					
+						Sparse representations, <br>
+					
+						are robust to small input changes. <br>
+					
+						Better information disentanglement! <br>
+					
+						 <br>
+					
+						Different inputs = different info, <br>
+					
+						Different info = different encoding. <br>
+					
+						Sparse representations can ... <br>
+					
+						 <br>
+					
+						... vary the number of active neurons, <br>
+					
+						Allows model to control <br>
+					
+						Effective dimensionality of output representation. <br>
+					
+						 <br>
+					
+						ReLU allows model to be, <br>
+					
+						Linear by parts. <br>
+					
+						1 model = exp. num of small linear models. <br>
+					
+						 <br>
+					
+						Gradients flow well <br>
+					
+						on active paths, <br>
+					
+						No vanishing gradients! <br>
+					
+						 <br>
+					
+						Cheaper computations, <br>
+					
+						No need to compute exponentials, <br>
+					
+						Better mathematical investigation. <br>
+					
+						 <br>
+					
+						Any disadvantages of ReLU? <br>
+					
+						It is a one-sided unbounded activation fn. <br>
+					
+						Hence needs to be used with L1/L2 regularization. <br>
+					
+						 <br>
+					
+						Also, requires 2x more neurons, <br>
+					
+						To represent anti-symmetric behaviours, <br>
+					
+						Like sigmoid / tanh. <br>
+					
+				</div>
+
+				<div class="content-body">
+
+					<div class="content-body-left">
+						<div class="content-body-left-title">
+						Abstract
+						</div>
+						While logistic sigmoid neurons are more biologically plausible than hyperbolic tangent neurons, the latter work better for training multi-layer neural networks. This paper shows that rectifying neurons are an even better model of biological neurons and yield equal or better performance than hyperbolic tangent networks in spite of the hard non-linearity and non-differentiability at zero, creating sparse representations with true zeros which seem remarkably suitable for naturally sparse data. Even though they can take advantage of semi-supervised setups with extra-unlabeled data, deep rectifier networks can reach their best performance without requiring any unsupervised pre-training on purely supervised tasks with large labeled datasets. Hence, these results can be seen as a new milestone in the attempts at understanding the difficulty in training deep but purely supervised neural networks, and closing the performance gap between neural networks learnt with and without unsupervised pre-training.
+					</div>
+
+					<div class="content-body-right">
+						
+						<p class="content-body-right-para">
+							<span class="detailname">Tags</span> 
+							<br>
+							
+								Image Classification;&nbsp;
+							
+								Activation Function;&nbsp;
+							
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Level</span>
+							<br> 
+							Fundamentals				
+						</p>
+
+						
+
+						<p class="content-body-right-para">
+							<span class="detailname">Paper Authors</span>
+							<br>
+							
+								Xavier Glorot,&nbsp;
+							
+								Antoine Bordes,&nbsp;
+							
+								Yoshua Bengio,&nbsp;
+									
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Authors Affiliation</span>
+							<br> 
+							DIRO, Universite de Montreal
+						</p>
+
+						<p class="content-body-right-para">
+							<span class="detailname">Publish Date</span>
+							<br> 
+							11 Apr 2011
+						</p>
+
+						<span>
+						<a class="read-more-link" target="_blank" href="http://proceedings.mlr.press/v15/glorot11a/glorot11a.pdf">
+							Paper Link
+						</a>
+						
+						&nbsp;
+						<a class="read-more-link" href="" target="_blank">
+							Code
+						</a>
+						
+						</span>
+					</div>
+
+				</div>
+
+				<div class="content-footer">
+					Haiku added on: 28 Feb 2021
+				</div>
+			</div>
+
+
+			<div class="excerpt-holder">
+				<div class="excerpt-title">
+					Paper excerpts to justify the haiku
+				</div>
+				
+					<img class="excerpt-image" src="../.././papers/0000017/screenshots/0000017_01.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000017/screenshots/0000017_02.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000017/screenshots/0000017_03.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000017/screenshots/0000017_04.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000017/screenshots/0000017_05.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000017/screenshots/0000017_06.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000017/screenshots/0000017_07.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000017/screenshots/0000017_08.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000017/screenshots/0000017_09.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000017/screenshots/0000017_10.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000017/screenshots/0000017_11.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000017/screenshots/0000017_12.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000017/screenshots/0000017_13.png">
+				
+					<img class="excerpt-image" src="../.././papers/0000017/screenshots/0000017_14.png">
+				
+			</div>
+		</div>
+
+
+</html>
